@@ -1,0 +1,408 @@
+/* Определяем блочную модель */
+html {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+.no-select {
+    user-select: none; /* Стандартное свойство */
+    -webkit-user-select: none; /* Для браузера Safari */
+    -moz-user-select: none; /* Для браузера Firefox */
+    -ms-user-select: none; /* Для браузера Internet Explorer/Edge */
+}
+
+/* Убираем стандартное подчёркивание у ссылок */
+a {
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: "Chronicle Display";
+	src: url("../font/Chronicle Display/ChronicleDisp-Light.otf");
+}
+
+@font-face {
+	font-family: "Chronicle Display XLight";
+	src: url("../font/Chronicle Display/ChronicleDisp-XLight.otf");
+}
+
+@font-face {
+	font-family: "Gilroy Bold";
+	src: url("../font/Gilroy/Gilroy-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Gilroy Light";
+	src: url("../font/Gilroy/Gilroy-Light.ttf");
+}
+
+body {
+	min-height: 100vh;
+	background-color: #0B1D26;
+
+	font-family: sans-serif;
+}
+
+.clouds_HG {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/background/HG.png');
+	background-size: cover;
+}
+
+.mountains_MG {
+	position: absolute;
+	top: 40vh;
+	left: 0;
+	z-index: 200;
+
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/background/MG.png');
+	background-size: cover;
+}
+
+.ground_VG {
+	position: absolute;
+	top: 60vh;
+	left: 0;
+	z-index: 300;
+
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/background/VG.png');
+	background-size: cover;
+}
+
+.gradient-top_BG {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 400;
+
+	width: 100%;
+	height: 150vh;
+	background-image: linear-gradient(to right bottom, rgba(11, 29, 38, 0.8), rgba(255, 255, 255, 0));*/
+}
+
+.gradient-end_BG {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	z-index: 500;
+
+	width: 100%;
+	height: 60vh;
+	background-image: url('../img/background/BG Content.png');
+}
+
+.container {
+	max-width: 1190px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+/*Секция шапки сайта*/
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 500;
+
+	width: 100%;
+	padding-top: 40px;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-family: "Chronicle Display", sans-serif;
+	text-transform: uppercase;
+	font-size: 32px;
+	color: #fff;
+}
+
+.menu {
+	font-family: "Gilroy Bold", sans-serif;
+}
+
+.menu__list {
+	display: flex;
+	list-style: none;
+}
+
+.menu__list-item {
+	margin-right: 20px;
+}
+
+.menu__list-link {
+	padding: 10px 20px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	font-family: "Gilroy Bold", sans-serif;
+}
+
+.account__link {
+	margin-left: 10px;
+	font-size: 17px;
+	color: #fff;
+}
+
+
+/*Секция главного блока сайта*/
+.headContent {
+	position: absolute;
+	top: 25vh;
+	left: 50%;
+	z-index: 600;
+
+	transform: translateX(-50%);
+	max-width: 950px;
+}
+
+.headContent__inner {
+	display: flex;
+	flex-direction: column;
+	row-gap: 45px;
+}
+
+.headContent__start {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 25px;
+
+	font-family: "Gilroy Bold";
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #FBD784;
+}
+
+.headContent__rect {
+	width: 72px;
+	height: 2px;
+	background-color: #FBD784;
+}
+
+.headContent__title {
+	font-family: "Chronicle Display XLight", sans-serif;
+	font-size: 88px;
+	color: #fff;
+}
+
+.headContent__end {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 15px;
+
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+.headContent__end img {
+	transition: all .5s;
+}
+
+.headContent__end img:hover {
+	margin-top: 3px;
+}
+
+
+/* Фиксированный блок с ссылками на внешние аккаунты */
+.followUs {
+	position: fixed;
+	left: 1vw;
+	top: 45%;
+	transform: translateY(-50%);
+	z-index: 700;
+}
+
+.followsUs__inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	row-gap: 20px;
+
+	color: #fff;
+}
+
+.followsUs__inner h2 {
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 18px;
+	transform: rotate(90deg);
+}
+
+.followsUs__inst {
+	margin-top: 40px;
+}
+
+
+/* Фиксированный блок навигации по странице */
+.navigation {
+	position: fixed;
+	right: 4vw;
+	top: 70%;
+	transform: translateY(-50%);
+	z-index: 700;
+}
+
+.navigation__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 10px;
+
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+.navigation__flex {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+}
+
+.navigation__text-content {
+	width: 50px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navigation__rect-item {
+	width: 3px;
+	height: 60px;
+	background-color: #fff;
+}
+
+
+/* Основной блок контента */
+.mainContent {
+	position: absolute;
+	top: 120vh;
+	left: 0;
+	z-index: 800;
+
+	width: 100%;
+}
+
+.mainContent__num {
+	position: absolute;
+	top: -5%;
+	left: -10%;
+
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 240px;
+	color: #fff;
+
+	opacity: 10%;
+}
+
+.mainContent__num-right {
+	left: 80%;
+}
+
+.mainContent__style {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 720px;
+/*	background-color: red;*/
+}
+
+.mainContent__style-reverse {
+	flex-direction: row-reverse;
+}
+
+.style-one__text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 25px;
+
+	width: 60%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.style-one__text-padding {
+	padding-left: 60px;
+	padding-right: 50px;
+}
+
+.style-one__title {
+	font-family: "Chronicle Display XLight", sans-serif;
+	font-size: 64px;
+	color: #fff;
+}
+
+.style-one__description {
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 18px;
+	line-height: 2;
+	color: #fff;
+}
+
+.style-one__end {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 15px;
+
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 18px;
+	color: #FBD784;
+}
+
+.style-one__image {
+	width: 40%;
+	min-height: 620px;
+}
+
+.style-one__image img {
+	width: 100%;
+}
+
+
+/* Футер сайта */
+.footer {
+	position: absolute;
+	top: 420vh;
+	left: 0;
+	z-index: 900;
+
+	width: 100%;
+}
