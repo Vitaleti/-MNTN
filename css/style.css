@@ -24,6 +24,7 @@ html {
 /* Убираем стандартное подчёркивание у ссылок */
 a {
 	text-decoration: none;
+	color: #fff;
 }
 
 @font-face {
@@ -405,4 +406,53 @@ body {
 	z-index: 900;
 
 	width: 100%;
+	font-family: "Gilroy Bold", sans-serif;
+	font-size: 18px;
+	color: #fff;
+
+	padding-bottom: 100px;
+}
+
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footer__logo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 25px;
+}
+
+.footer__logo-inc {
+	margin-top: 125px;
+	opacity: 50%;
+}
+
+.footer__links {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 100px;
+}
+
+.footer__links h2 {
+	font-size: 24px;
+	color: #FBD784;
+}
+
+.footer__links ul {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+}
+
+.footer__links li {
+	list-style: none;
+}
+
+.footer__links li:hover {
+	opacity: 50%;
 }
